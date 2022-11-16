@@ -1,0 +1,86 @@
+[
+    {
+        "id" : 1, 
+        "nombre" : "Laptop Acer Nitro 5",
+        "categoria" : "LAPTOPS",
+        "img_principal" : "https://i.linio.com/p/8406bb2851f9414a1af8c79355292839-product.webp",
+        "img_1" : "https://promart.vteximg.com.br/arquivos/ids/6524919-1000-1000/image-519edbd14453465bb0d92449df00e1e2.jpg?v=637987715805530000",
+        "img_2" : "https://promart.vteximg.com.br/arquivos/ids/6524916-1000-1000/image-4f9261f6d657427896926be33b0b83b4.jpg?v=637987715805070000",
+        "img_3" : "https://falabella.scene7.com/is/image/FalabellaPE/gsc_115343260_1086356_2?wid=1500&hei=1500&qlt=70",
+        "caracteristicas" : "Procesador: Core I7-11800H 2.3Ghz # Sistema operativo: Windows 11 # Tarjeta de video: Nvidia Geforce Rtx 3050Ti 4Gb # Almacenamiento: 512 MB # Memoria RAM: 8GB # Pantalla: 15.6 # Color: Negro # Teclado: Ingles",
+        "precio" : 1264,
+        "stock" : 50
+    },
+    {
+        "id" : 2,
+	    "nombre" : "Alienware x17",
+	    "categoria" : "LAPTOPS",
+        "img_principal" : "https://falabella.scene7.com/is/image/FalabellaPE/18800704_1?wid=1500&hei=1500&qlt=70",
+        "img_1" : "https://rymportatiles.com.pe/wp-content/uploads/2022/07/Dell-Alienware-X17-R2-5.jpg.webp",
+        "img_2" : "https://rymportatiles.com.pe/wp-content/uploads/2022/07/Dell-Alienware-X17-R2-3.jpg.webp",
+        "img_3" : "https://rymportatiles.com.pe/wp-content/uploads/2022/07/Dell-Alienware-X17-R2-5.jpg.webp",
+	    "caracteristicas" : "Procesador: Procesador Intel® Core i9 11980HK de 11.ª generación (8 núcleos, 24 MB de caché L3, hasta 5,0 GHz con tecnología Turbo Boost) # Sistema operativo: Windows 11 # Tarjeta de video: Video NVIDIA GeForce RTX 3080 # Almacenamiento: 1 TB # Memoria RAM: 32GB # Pantalla: 17 # Chasis: Aluminio # Color: Blanco # Teclado: Incorporado a chasis Alienware mSeries con iluminación AlienFX LED RGB de cuatro zonas",
+	    "precio" : 7369,
+	    "stock" : 50
+    },
+    {
+        "id" : 3,
+	    "nombre" : "Laptop ASUS TUF FHD",
+	    "categoria" : "LAPTOPS",
+        "img_principal" : "https://i.linio.com/p/62073a026ed32fe34a6f1b9b5b98cd04-product.webp",
+        "img_1" : "https://rymportatiles.com.pe/wp-content/uploads/2022/07/ASUS-FA506IC-HN042W-3.jpg.webp",
+        "img_2" : "https://rymportatiles.com.pe/wp-content/uploads/2022/09/FA506ICB-HN105W-6254.jpg.webp",
+        "img_3" : "https://rymportatiles.com.pe/wp-content/uploads/2022/07/ASUS-FA506IC-HN042W-5.jpg.webp",
+        "caracteristicas" : "Procesador: Procesador Intel® i5-11260H # Sistema operativo: Windows 10 # Tarjeta de video: NVIDIA GeForce RTX 3050 (4 GB GDDR6) # Almacenamiento: 512MB # Memoria RAM: 8GB # Pantalla: 15.6 # Color: Negro",
+        "precio" : 846,
+        "stock" : 50
+    },
+    {
+        "id" : 4,
+	    "nombre" : "Laptop gamer Msi GL66 Pulse",
+	    "categoria" : "LAPTOPS",
+        "img_principal" : "https://coolboxpe.vtexassets.com/arquivos/ids/207719-600-auto?v=637831297388570000&width=600&height=auto&aspect=true",
+        "img_1" : "https://coolboxpe.vtexassets.com/arquivos/ids/214820-600-auto?v=637902092493730000&width=600&height=auto&aspect=true",
+        "img_2" : "https://coolboxpe.vtexassets.com/arquivos/ids/214825-600-auto?v=637902093275770000&width=600&height=auto&aspect=true",
+        "img_3" : "https://coolboxpe.vtexassets.com/arquivos/ids/214827-600-auto?v=637902093622530000&width=600&height=auto&aspect=true",
+        "caracteristicas" : "Procesador: Intel Core i7 -11800H 11va Generación - Octa Core # Sistema operativo: Windows 10 Home # Tarjeta de video: NVIDIA  GeForce RTX 3050Ti 4 GB GDDR6 # Almacenamiento: 512MB # Memoria RAM: 16GB # Pantalla: 15.6# Color: Negro # Teclado: Español retroiluminado RGB",
+	    "precio" : 2263,
+	    "stock" : 50
+    },
+    {
+        "id" : 5,
+	    "nombre" : "Laptop HP Victus Gaming",
+	    "categoria" : "LAPTOPS",
+        "img_principal" : "https://d598hd2wips7r.cloudfront.net/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/6/F/6F7G7LA-1_T1658789386.png",
+        "img_1" : "https://d598hd2wips7r.cloudfront.net/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/6/F/6F7G7LA-2_T1658789387.png",
+        "img_2" : "https://d598hd2wips7r.cloudfront.net/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/6/F/6F7G7LA-4_T1658789388.png",
+        "img_3" : "https://d598hd2wips7r.cloudfront.net/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/6/F/6F7G7LA-6_T1658789389.png",
+	    "caracteristicas" : "Procesador: AMD Ryzen™ 5 # Sistema operativo: Windows 11 Home Single Language # Tarjeta de video: NVIDIA® GeForce RTX™ 3050 para laptop (GDDR6 de 4 GB dedicada) # Almacenamiento: 512MB # Memoria RAM: 16GB # Pantalla: 15.6# Color: Negro # Teclado: tamaño completo,Color plata retroiluminado RGB",
+	    "precio" : 1281,
+	    "stock" : 50
+    },
+    {
+        "id" : 6,
+	    "nombre" : "Legion 7i 16 6ta Gen - Storm Grey",
+	    "categoria" : "LAPTOPS",
+        "img_principal" : "https://www.lenovo.com/medias/lenovo-laptop-gaming-legion-7i-gen6-16-hero.png?context=bWFzdGVyfHJvb3R8MjI1OTMzfGltYWdlL3BuZ3xoZjQvaDU1LzE0MTgxMzI1MzA3OTM0LnBuZ3xiOGM2ZDFkY2JhYzFlMjU5NmZlZTBkZDZiMzI5NjA2YzhjY2VjN2IyYjEwMjU4NTViYTlmNjhmYTA3NjNkN2Y5",
+        "img_1" : "https://www.lenovo.com/medias/lenovo-laptop-gaming-legion-7i-gen6-16-gallery.png?context=bWFzdGVyfHJvb3R8NTQzOTI4fGltYWdlL3BuZ3xoODkvaGU5LzE0MTgxMzI1NDM5MDA2LnBuZ3xmZDIyZDlmNDA4N2NkMjkzMDU4NzFiN2E2MzE2Yjc5ZjcyYTk4MzU4NWU5YWMyY2M4YzI3MGYwM2U1YThiZTUz",
+        "img_2" : "https://www.lenovo.com/medias/?context=bWFzdGVyfHJvb3R8MTI3OTAyfGltYWdlL3BuZ3xoNjkvaGZlLzExNjM4NDk5MDgyMjcwLnBuZ3w3NDgxNTRkMTQxNzdjYjliMGYyY2QwMDljYjEwMzk2Mzk5ZGNkMTBhNDE4ODg2N2JmZTk3YjA4YjQ4YTg4MTEy",
+        "img_3" : "https://www.lenovo.com/medias/?context=bWFzdGVyfHJvb3R8NjkzNzV8aW1hZ2UvcG5nfGg3Ny9oMTkvMTE2Mzg0OTkyMTMzNDIucG5nfDE2ZWIxYmEwZmJkOGMwYTRlY2NhNzk3NjQ4YzNkZThjMGRiMDYwOGFjYzA4NDU4YWUzM2MzODRiMDQzM2JkMGQ",
+	    "caracteristicas" : "Procesador: Intel® Core™ i9-11980HK de 11ᵃ Generación (2.60 GHz hasta 5.00 GHz) # Sistema operativo: Windows 11 Home Single Language # Tarjeta de video: NVIDIA GeForce® RTX™ 3080 16GB GDDR6 # Almacenamiento: 1TB SSD # Memoria RAM: 32GB # Pantalla: 16# Color: storm grey # Teclado: RGB Retroiluminado, Español (LA)",
+	    "precio" : 3684,
+	    "stock" : 50
+    },
+    {
+        "id" : 7, 
+	    "nombre" : "Legion 7i 7ma Gen",
+	    "categoria" : "LAPTOPS",
+        "img_principal" : "https://www.lenovo.com/medias/lenovo-gaming-legion-7i-gen-7-16-intel-hero.png?context=bWFzdGVyfHJvb3R8NjQ2NTYwfGltYWdlL3BuZ3xoNjYvaDQ0LzE0Mjg3Nzc1NDMyNzM0LnBuZ3w2NGQ4ZTNhMTYxNjI2Zjc3MjIzNGQ4NzBmNWY2NDM5MWM2MDQ5ZWQxNTNlOTE3ZGIyZmUyZWM1YzYxMWJhZjQ4",
+        "img_1" : "https://www.lenovo.com/medias/lenovo-gaming-legion-7i-gen-7-16-intel-gallery-1.png?context=bWFzdGVyfHJvb3R8NDEzNDI4fGltYWdlL3BuZ3xoZGQvaGY5LzE0Mzk3MTgxMjk2NjcwLnBuZ3xhMjZkODg1NmRiMTdkZGNmMjhkN2U4ZWY5MjgzNTlkMTM0MTQxYjkzODdkNzhlMTc1YTZiOGI3ZmQyM2YzNWQz",
+        "img_2" : "https://www.lenovo.com/medias/lenovo-gaming-legion-7i-gen-7-16-intel-gallery-2.png?context=bWFzdGVyfHJvb3R8NDE0NDY0fGltYWdlL3BuZ3xoYzIvaDQ4LzE0MzMyMDkwNDE3MTgyLnBuZ3xiYzIxNmFkYzk5MWJiNmQ5MWIwNWQ0MTJlNTRhNjM0NTliYTA5MDQ0ZTc4MzUxZTMwNDdhMDg2MTE0MWNhZjk4",
+        "img_3" : "https://www.lenovo.com/medias/lenovo-gaming-legion-7i-gen-7-16-intel-gallery-4.png?context=bWFzdGVyfHJvb3R8MjkxNjc3fGltYWdlL3BuZ3xoMzUvaDRlLzE0MzMyMDkxMDcyNTQyLnBuZ3xiYTJmNDgyM2QyZjYzMmM5NjJjOWEwMDk0NzkzZTFmZGI1NjExMmNhN2JkMmI5NmRhZTNmMmYzYzdlNTQzZDk3",
+	    "caracteristicas" : "Procesador Intel® Core™ i7-12800HX de 12ᵃ Generación # Sistema operativo: Windows 11 Home Single Language # Tarjeta de video: NVIDIA® GeForce® RTX™ 3070 Ti 8 GB GDDR6X # Almacenamiento: 512MB # Memoria RAM: 32GB # Pantalla: 16# Color: Gris # Teclado: Teclado retroiluminado RGB, gris tormenta",
+	    "precio" : 3086,
+	    "stock" : 50
+    }
+]

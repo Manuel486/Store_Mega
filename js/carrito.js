@@ -15,7 +15,7 @@ function cargarCarrito(){
                 <div class="col border d-flex flex-row align-items-center justify-content-center my-2" id='${producto.id}'>
                     <img src="${producto.img}" class="img-fluid mx-3" width="120px" alt="">
                     <div class="mx-3">
-                        <h4>L${producto.nombre}</h4>
+                        <h4>${producto.nombre}</h4>
                         <p> $ ${producto.precio}</p>
                     </div>
                     <div class="text-center mx-3 d-flex align-items-center">
@@ -39,19 +39,30 @@ function cargarCarrito(){
 
 cargarCarrito();
 
-document.getElementById('contenedor').addEventListener('click',(e) => {
+document.getElementById('contenedor').addEventListener('click', async(e) => {
     let carrito = JSON.parse(localStorage.getItem("productos"));
     let id = e.target.parentElement.parentElement.id;
     let index = carrito.findIndex( e => { return e.id == id });
+    const respuesta = await fetch("../data/db.json");
+    const data = await respuesta.json();
+    let total = data[id-1].stock;
     if(e.target.tagName == 'SPAN'){
         if(e.target.classList.contains('mas')){
-            e.target.nextElementSibling.textContent++;
-            carrito[index].cantidad++;
+            total = total - carrito[index].cantidad;
+            if(total > 0){
+                e.target.nextElementSibling.textContent++;
+                carrito[index].cantidad++;
+            } else {
+                alert('Llego al maximo del stock');
+            }
         }
 
         if(e.target.classList.contains('menos')){
-            e.target.previousElementSibling.textContent--;
-            carrito[index].cantidad--;
+            valor = eval(e.target.previousElementSibling.textContent);
+            if(valor > 1){
+                e.target.previousElementSibling.textContent--;
+                carrito[index].cantidad--;
+            }
         }
     }
 
@@ -62,10 +73,6 @@ document.getElementById('contenedor').addEventListener('click',(e) => {
 
     localStorage.setItem("productos", JSON.stringify(carrito));
     actualizarCantidad();
-    // let monto = carrito.map(item => item.precio*item.cantidad).reduce((prev, curr) => prev + curr, 0);
-    // total.innerHTML = `
-    //     El total a pagar es : <b>S/.${monto}</b>
-    // `
     const productos = JSON.parse(localStorage.getItem("productos")) || [];
     if(productos.length == 0){
         contenedor.innerHTML = `

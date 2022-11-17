@@ -78,8 +78,8 @@ async function cargargarDescripcion(){
                         <br>
                     </div>
                     <div class="buttons d-flex flex-row mt-5 gap-3 justify-content-center">
-                        <button class="btn"   onclick="window.history.back();">Atrás</button>
-                        <button class="btn" id="agregarCarro">Comprar</button>
+                        <button class="btn" onclick="window.history.back();">Atrás</button>
+                        <button class="btn" id="agregarCarro" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="El producto se añadio al carrito">Comprar</button>
                     </div>
                     <br>
                 </div>
@@ -91,6 +91,8 @@ async function cargargarDescripcion(){
     let nueva_data  = await data.filter( e => e.id != q && e.categoria == data[q-1].categoria);
     let data_aleatoria = await nueva_data.sort(() => Math.random() > 0.5 ? 1 : -1).slice(0,3)
     let htmlInteresar = tePuedeInteresar(data_aleatoria);
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
     html += htmlInteresar;
     document.getElementById("contenedor").innerHTML = html;
 }

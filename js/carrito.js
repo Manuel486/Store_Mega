@@ -35,7 +35,7 @@ function cargarCarrito() {
                 <div class="col border d-flex flex-row align-items-center justify-content-center my-2" id='${producto.id}'>
                     <img src="${producto.img}" class="img-fluid mx-3" width="120px" alt="">
                     <div class="mx-3">
-                        <h4>L${producto.nombre}</h4>
+                        <h4>${producto.nombre}</h4>
                         <p> $ ${producto.precio}</p>
                     </div>
                     <div class="text-center mx-3 d-flex align-items-center">

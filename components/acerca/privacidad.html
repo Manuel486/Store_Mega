@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+  <title>Store Mega</title>
+  <link rel="icon" type="image/x-icon" href="../../images/logo.ico">
   <!-- CSS only -->
    <link
    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -46,12 +47,13 @@
     <!-- Inicia Header 1-->
     <header class="cabecera1 p-2 mb-3 pb-0 border-bottom">
       <div class="container">
-        <div class="d-flex flex-row-reverse">
-          <i class="bi bi-cart-check-fill p-2"></i>
+        <div class="d-flex flex-row-reverse align-items-center">
+          <a href="../carrito.html" class="position-relative text-center">
+            <i class="bi bi-cart-check-fill p-2"></i>
+            <span class="translate-middle badge rounded-pill bg-danger" id="valor_carrito">0</span>
+          </a>
           <i id="login-btn" class="bi bi-person-fill p-2"></i>
-          <a href="#"
-            ><p class="p-2 register-color">Registrarse / Iniciar Sesión</p></a
-          >
+          <a href="#" class="p-2 register-color">Registrarse / Iniciar Sesión</a>
           <i class="bi bi-whatsapp p-2"></i>
           <i class="bi bi-facebook p-2"></i>
           <i class="bi bi-instagram p-2"></i>
@@ -88,18 +90,18 @@
               <a href="../../index.html" class="nav-link px-2 link-secondary">Tienda</a>
             </li>
             <li class="navletters">
-              <a href="../accesorios/accesorios.html" class="nav-link px-2 link-dark">Accesorios</a>
+              <a href="../catalogo.html?categoria=ACCESORIOS" class="nav-link px-2 link-dark">Accesorios</a>
             </li>
             <li class="navletters">
               <a
-                href="../laptops/laptops.html"
+                href="../catalogo.html?categoria=LAPTOPS"
                 class="nav-link px-2 link-dark"
                 >Laptops</a
               >
             </li>
             <li class="navletters">
               <a
-                href="../audifonos/index.html"
+                href="../catalogo.html?categoria=AUDIFONOS"
                 class="nav-link px-2 link-dark"
                 >Audífonos</a
               >
@@ -177,6 +179,7 @@
             <br>
             El tratamiento de datos personales para las anteriores finalidades, y para cualquier otra finalidad lícita distinta a las antes mencionadas es debidamente informado a los Titulares de datos personales, requiriéndoles una autorización específica según el público de interés que corresponda, en cumplimiento del principio de consentimiento, con las excepciones previstas en la Normativa de Protección de Datos Personales.    
         </p>
+    </div>
     </div>
     <br>
 <!-- Fin Sección-->
@@ -297,10 +300,10 @@
   <!-- Termina footer -->
 
 <!--Inicio de scrip-->
-<script type="text/javascript" src="../../js/script.js"></script>
-<script type="text/javascript" src="../../js/cantidad.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script type="text/javascript" src="../../js/script.js"></script> -->
+<!-- <script type="text/javascript" src="../../js/cantidad.js"></script> -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 <!--Fin de scrip-->
-
+<script src="../../js/actualizarCarrito.js"></script>
 </body>
 </html>

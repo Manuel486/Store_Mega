@@ -129,7 +129,7 @@ function tePuedeInteresar(data){
                                 ${ul}
                             </div>
                             <div class="rating-div"><span class="rating">★★★★☆</span></div>
-                            <a href="#" class="add-cart">Añadir al carrito</a>
+                            <a href="../components/descripcion.html?id=${producto.id}" class="add-cart">Ver más características</a>
                         </div>
                     </div>       
         `

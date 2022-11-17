@@ -53,7 +53,7 @@ document.getElementById('contenedor').addEventListener('click', async(e) => {
                 e.target.nextElementSibling.textContent++;
                 carrito[index].cantidad++;
             } else {
-                alert('Llego al maximo del stock');
+                mostraNotificacion('bi','bi-exclamation-circle-fill','text-warning','STOCK','SE ALCANZO EL MAXIMO DE STOCK PERMITIDO PARA EL PRODUCTO');
             }
         }
 
@@ -80,3 +80,14 @@ document.getElementById('contenedor').addEventListener('click', async(e) => {
         `
     } 
 })
+
+// Notificacion : warning
+function mostraNotificacion(clase1,clase2,clase3,titulo,mensajeNotif){
+    document.getElementById('toast_icono').className = '';
+    document.getElementById('toast_icono').classList.add(clase1,clase2,clase3);
+    toast_titulo.textContent = titulo;
+    toast_mensaje.textContent = mensajeNotif;
+    let alerta = document.querySelector('.toast');
+    let mensaje = new bootstrap.Toast(alerta);
+    mensaje.show()
+}

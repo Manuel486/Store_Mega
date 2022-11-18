@@ -119,14 +119,14 @@
             </li>
           </ul>
 
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
             <input
               type="search"
               class="form-control"
               placeholder="Buscar..."
               aria-label="Search"
             />
-          </form>
+          </form> -->
         </div>
       </div>
     </header>
@@ -173,7 +173,7 @@
       <div class="contact-wrapper">
         <div class="contact-form">
           <h3>Contáctanos</h3>
-          <form action="" id="formulario-contacto">
+          <form action="" id="formulario_contacto">
             <p>
               <label for="">Nombre</label>
               <input type="text" name="nombres" id="nombres" required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$" oninvalid="this.setCustomValidity('Solo puede ingresar letras')" oninput="this.setCustomValidity('')" />
@@ -343,8 +343,8 @@
   <!-- Termina footer -->
 <!--Inicio de scrip-->
 <script>
-  const btnEnvio = document.getElementById('enviarCorreo');
-  btnEnvio.addEventListener('click', function(e){
+  const btnEnvio = document.getElementById('formulario_contacto');
+  btnEnvio.addEventListener('submit', function(e){
       e.preventDefault();
       const nombre= document.getElementById("nombres").value;
       const apellido= document.getElementById("apellidos").value;
@@ -352,7 +352,6 @@
       const asunto= document.getElementById("asunto").value;
       const mensaje= document.getElementById("mensaje").value;
       window.location.href=`mailto:contact@storemega.com.to?subject=envioDesdeFormulario&body=Nombre%3A${nombre}%0AApellido%3A${apellido}%0ACorreo%3A${correo}%0AAsunto%3A${asunto}%0AMensaje%3A${mensaje}`;
-  
   });
 </script>
 <!-- <script type="text/javascript" src="../js/script.js"></script>

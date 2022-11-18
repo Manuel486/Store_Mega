@@ -18,7 +18,7 @@ async function cargarJSON(){
         })
         ul += '</ul>'
         html += `
-            <div style="${border}; width: 70%; margin: 0 auto;" id=${producto.id}>
+            <div style="${border}; width: 70%; margin: 0 auto;" id=${producto.id} class="articulos">
                 <div class="container px-4" style="margin-bottom: 30px;">
                     <div class="row gx-5">
                         <div class="col" style="margin-top: 50px;">

@@ -173,14 +173,14 @@
       <div class="contact-wrapper">
         <div class="contact-form">
           <h3>Contáctanos</h3>
-          <form action="" id="formulario">
+          <form action="" id="formulario-contacto">
             <p>
-              <label for="">Nombres</label>
+              <label for="">Nombre</label>
               <input type="text" name="nombres" id="nombres" required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$" oninvalid="this.setCustomValidity('Solo puede ingresar letras')" oninput="this.setCustomValidity('')" />
             </p>
 
             <p>
-              <label for="">Apellidos</label>
+              <label for="">Apellido</label>
               <input type="text" name="apellidos" id="apellidos" required pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$" oninvalid="this.setCustomValidity('Solo puede ingresar letras')" oninput="this.setCustomValidity('')"/>
             </p>
 
@@ -196,7 +196,7 @@
 
             <p class="block">
               <label for="">Mensaje</label>
-              <textarea
+              <textarea style="resize: none;"
                 name="mensaje"
                 id="mensaje"
                 rows="3"
@@ -206,7 +206,7 @@
             </p>
 
             <p class="block">
-              <button type="submit">Enviar</button>
+              <button id="enviarCorreo" type="submit">Enviar</button>
             </p>
           </form>
         </div>
@@ -342,9 +342,22 @@
   <br />
   <!-- Termina footer -->
 <!--Inicio de scrip-->
-<!-- <script type="text/javascript" src="../js/script.js"></script> -->
-<!-- <script type="text/javascript" src="../js/cantidad.js"></script> -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script>
+  const btnEnvio = document.getElementById('enviarCorreo');
+  btnEnvio.addEventListener('click', function(e){
+      e.preventDefault();
+      const nombre= document.getElementById("nombres").value;
+      const apellido= document.getElementById("apellidos").value;
+      const correo= document.getElementById("correo").value;
+      const asunto= document.getElementById("asunto").value;
+      const mensaje= document.getElementById("mensaje").value;
+      window.location.href=`mailto:contact@storemega.com.to?subject=envioDesdeFormulario&body=Nombre%3A${nombre}%0AApellido%3A${apellido}%0ACorreo%3A${correo}%0AAsunto%3A${asunto}%0AMensaje%3A${mensaje}`;
+  
+  });
+</script>
+<!-- <script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/cantidad.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 <!--Fin de scrip-->
 <script src="../js/actualizarCarrito.js"></script>
 </body>

@@ -32,26 +32,25 @@ function cargarCarrito() {
   } else {
     productos.forEach((producto) => {
       html += `
-                <div class="col border d-flex flex-row align-items-center justify-content-center my-2" id='${producto.id}'>
-                    <img src="${producto.img}" class="img-fluid mx-3" width="120px" alt="">
-                    <div class="mx-3">
+                <div class="col border r-flex flex-md-row align-items-center justify-content-center my-2" id='${producto.id}'>
+                    <div class="text-center">
+                        <img src="${producto.img}" class="d-block mx-auto" width="120px" alt="">
+                    </div>
+                    <div class="mx-3 w-25 text-center align-self-center titulo_producto">
                         <h4>${producto.nombre}</h4>
                         <p> $ ${producto.precio}</p>
                     </div>
-                    <div class="text-center mx-3 d-flex align-items-center">
-                        <span class="btn mas">+</span>
+                    <div class="d-flex justify-content-center justify-content-md-center align-items-center">
+                        <span class="btn my-0 mas">+</span>
                         <span class="fs-4 text-primary mx-3 p-2">${producto.cantidad}</span>
-                        <span class="btn menos">-</span>
-                    </div>
-                    <div>
-                        <i class="bi bi-trash-fill btn"></i>
-                    </div>
-                    
+                        <span class="btn my-0 menos">-</span>
+                        <i class="bi bi-trash-fill btn ms-3 my-0"></i>
+                    </div>                    
                 </div>
             `;
     });
     html += `
-            <a href="pago.html" class="btn my-2 w-25 d-block mx-auto">Comprar</a>
+            <a href="pago.html" class="btn my-2 w-50 d-block mx-auto">Comprar</a>
         `;
     contenedor.innerHTML = html;
   }

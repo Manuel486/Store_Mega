@@ -59,38 +59,43 @@ function cargarCarrito() {
 
 cargarCarrito();
 
-document.getElementById("contenedor").addEventListener("click", (e) => {
+document.getElementById('contenedor').addEventListener('click', async(e) => {
   let carrito = JSON.parse(localStorage.getItem("productos"));
   let id = e.target.parentElement.parentElement.id;
-  let index = carrito.findIndex((e) => {
-    return e.id == id;
-  });
-  if (e.target.tagName == "SPAN") {
-    if (e.target.classList.contains("mas")) {
-      e.target.nextElementSibling.textContent++;
-      carrito[index].cantidad++;
-    }
+  let index = carrito.findIndex( e => { return e.id == id });
+  const respuesta = await fetch("../data/db.json");
+  const data = await respuesta.json();
+  let total = data[id-1].stock;
+  if(e.target.tagName == 'SPAN'){
+      if(e.target.classList.contains('mas')){
+          total = total - carrito[index].cantidad;
+          if(total > 0){
+              e.target.nextElementSibling.textContent++;
+              carrito[index].cantidad++;
+          } else {
+              mostraNotificacion('bi','bi-exclamation-circle-fill','text-warning','STOCK','SE ALCANZO EL MAXIMO DE STOCK PERMITIDO PARA EL PRODUCTO');
+          }
+      }
 
-    if (e.target.classList.contains("menos")) {
-      e.target.previousElementSibling.textContent--;
-      carrito[index].cantidad--;
-    }
+      if(e.target.classList.contains('menos')){
+          valor = eval(e.target.previousElementSibling.textContent);
+          if(valor > 1){
+              e.target.previousElementSibling.textContent--;
+              carrito[index].cantidad--;
+          }
+      }
   }
 
-  if (e.target.tagName == "I") {
-    carrito.splice(index, 1);
-    e.target.parentElement.parentElement.remove();
+  if(e.target.tagName == 'I'){
+      carrito.splice(index,1);
+      e.target.parentElement.parentElement.remove();
   }
 
   localStorage.setItem("productos", JSON.stringify(carrito));
   actualizarCantidad();
-  // let monto = carrito.map(item => item.precio*item.cantidad).reduce((prev, curr) => prev + curr, 0);
-  // total.innerHTML = `
-  //     El total a pagar es : <b>S/.${monto}</b>
-  // `
   const productos = JSON.parse(localStorage.getItem("productos")) || [];
-  if (productos.length == 0) {
-    contenedor.innerHTML = `
+  if(productos.length == 0){
+      contenedor.innerHTML = `
             <div class="container">
       <div class="shop-box row">
         <div class="col-sm ">
@@ -113,5 +118,16 @@ document.getElementById("contenedor").addEventListener("click", (e) => {
       </div>
     </div>
         `;
-  }
-});
+  } 
+})
+
+// Notificacion : warning
+function mostraNotificacion(clase1,clase2,clase3,titulo,mensajeNotif){
+  document.getElementById('toast_icono').className = '';
+  document.getElementById('toast_icono').classList.add(clase1,clase2,clase3);
+  toast_titulo.textContent = titulo;
+  toast_mensaje.textContent = mensajeNotif;
+  let alerta = document.querySelector('.toast');
+  let mensaje = new bootstrap.Toast(alerta);
+  mensaje.show()
+}

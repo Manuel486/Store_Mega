@@ -32,11 +32,23 @@ paypal
     onApprove: function (data, actions) {
       actions.order.capture().then(function (detalles) {
         vaciarCarrito();
-        window.location.href = "../index.html";
+        Swal.fire({
+          title: "¡Compra realizada con éxito!",
+          text: "Gracias por su pago. La transacción fue realizada de manera exitosa. Recibirá un e-mail con el detalle de la compra.",
+          icon: "success",
+          confirmButtonColor: "#ff9138",
+          confirmButtonText: "Regresar",
+          allowOutsideClick: false,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "../index.html";
+          }
+        });
+        
       });
     },
     onCancel: function (data) {
-      alert("Pago cancelado");
+      // alert("Pago cancelado");
     },
   })
   .render("#paypal-button-container");
